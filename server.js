@@ -1,3 +1,4 @@
+const whoami = require("./routes/whoami-router")
 // server.js
 // where your node app starts
 
@@ -25,6 +26,7 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+app.use("/api",whoami)
 
 
 // listen for requests :)
